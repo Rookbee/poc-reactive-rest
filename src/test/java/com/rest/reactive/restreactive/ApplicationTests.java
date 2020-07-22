@@ -1,4 +1,4 @@
-package com.rest.reactive;
+package com.rest.reactive.restreactive;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

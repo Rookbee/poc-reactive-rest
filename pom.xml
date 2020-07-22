@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rest.reactive</groupId>
-	<artifactId>poc-reactive</artifactId>
+	<artifactId>poc-rest-reactive</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>poc-reactive</name>
-	<description>POC Reactive Rest for Spring Boot</description>
+	<name>poc-rest-reactive</name>
+	<description>Rest Reactive  project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -21,13 +21,36 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.r2dbc</groupId>
+			<artifactId>r2dbc-h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.r2dbc</groupId>
+			<artifactId>r2dbc-postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -40,6 +63,26 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-spring-webflux</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 
